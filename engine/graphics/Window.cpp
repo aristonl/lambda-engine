@@ -26,8 +26,12 @@ namespace lambda { namespace graphics {
 			return false;
 		}
 
-		glfwMakeContextCurrent(m_window);
-		glfwSetWindowSizeCallback(m_window, WindowResize());
+		glfwMakeContextCurrent(m_window); // Making sure the main window is set to the only window we have lmao. 
+
+		// Only resize the glViewpoint when window resize is called back instead of doing it in the update function.
+		// Putting it in the update function is very resource intensive since it will be resetting the viewpoint every
+		// tick so it's better to call WindowResize when a resize is detected.
+		glfwSetWindowSizeCallback(m_window, WindowResize()); 
 		return true;
 	}
 
@@ -36,7 +40,7 @@ namespace lambda { namespace graphics {
 	}
 
 	void Window::clear() const {
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT); // again, still not sure why we need this but here it is
 	}
 
 	void Window::update() {
@@ -45,7 +49,7 @@ namespace lambda { namespace graphics {
 		glfwPollEvents();
 	}
 
-	void WindowResize(GLFWwindow* window, int width, int height) {
+	void WindowResize(GLFWwindow* window, int width, int height) { 
 		glViewport(0, 0, width, height);
 	}
 } }
