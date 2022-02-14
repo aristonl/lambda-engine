@@ -14,7 +14,7 @@ namespace lambda { namespace graphics {
 
 	bool Window::init() {
 		if (!glfwInit()) {
-			std::cout << "[GLFW] GLFW was unable to initialize... too bad!" << std::endl; 
+			std::cout << "[GLFW] GLFW was unable to initialize... too bad!" << std::endl; // fuck this thing
 			return false;
 		}
 
@@ -38,8 +38,10 @@ namespace lambda { namespace graphics {
 		glClear(GL_COLOR_BUFFER_BIT);
 	}
 
-	void Window::update() const {
+	void Window::update() {
 		glfwSwapBuffers(m_window);
+		glfwGetFramebufferSize(m_window, &m_width, &m_height);
+		glViewport(0, 0, m_width, m_height);
 		glfwPollEvents();
 	}
 

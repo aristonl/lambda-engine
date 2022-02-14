@@ -15,8 +15,11 @@ namespace lambda { namespace graphics {
 	public:
 		Window(const char* title, int width, int height);
 		~Window();
-		void update() const;
+		void update();
 		bool closed() const;
 		void clear() const;
+
+		inline int getWidth() const { return m_width; }
+		inline int getHeight() const { return m_height; }
 	};
 } }
