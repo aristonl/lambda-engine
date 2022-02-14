@@ -31,11 +31,16 @@ namespace lambda { namespace graphics {
 	}
 
 	bool Window::closed() const {
-		return glfwWindowShouldClose(m_window);
+		return glfwWindowShouldClose(m_window) == 1;
+	}
+
+	void Window::clear() const {
+		glClear(GL_COLOR_BUFFER_BIT);
 	}
 
 	void Window::update() const {
 		glfwSwapBuffers(m_window);
 		glfwPollEvents();
 	}
+
 } }

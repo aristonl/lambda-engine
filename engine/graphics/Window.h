@@ -17,5 +17,6 @@ namespace lambda { namespace graphics {
 		~Window();
 		void update() const;
 		bool closed() const;
+		void clear() const;
 	};
 } }
