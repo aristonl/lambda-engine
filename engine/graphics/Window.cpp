@@ -27,6 +27,7 @@ namespace lambda { namespace graphics {
 		}
 
 		glfwMakeContextCurrent(m_window);
+		glfwSetWindowSizeCallback(m_window, WindowResize());
 		return true;
 	}
 
@@ -41,8 +42,10 @@ namespace lambda { namespace graphics {
 	void Window::update() {
 		glfwSwapBuffers(m_window);
 		glfwGetFramebufferSize(m_window, &m_width, &m_height);
-		glViewport(0, 0, m_width, m_height);
 		glfwPollEvents();
 	}
 
+	void WindowResize(GLFWwindow* window, int width, int height) {
+		glViewport(0, 0, width, height);
+	}
 } }
