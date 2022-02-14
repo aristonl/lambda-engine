@@ -1,6 +1,8 @@
 #include "Window.h"
 
 namespace lambda { namespace graphics {
+	void WindowResize(GLFWwindow* window, int width, int height);
+
 	Window::Window(const char* title, int width, int height) {
 		m_title = title;
 		m_width = width;
@@ -31,7 +33,7 @@ namespace lambda { namespace graphics {
 		// Only resize the glViewpoint when window resize is called back instead of doing it in the update function.
 		// Putting it in the update function is very resource intensive since it will be resetting the viewpoint every
 		// tick so it's better to call WindowResize when a resize is detected.
-		glfwSetWindowSizeCallback(m_window, WindowResize()); 
+		glfwSetWindowSizeCallback(m_window, WindowResize); 
 		return true;
 	}
 
