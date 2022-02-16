@@ -16,6 +16,7 @@ int main() {
 		// std::cout << "[DEBUG] " << window.getWidth() << ", " << window.getHeight() << std::endl;
 
 		window.clear();
+
 		glBegin(GL_TRIANGLES);
 		glVertex2f(-0.5f, -0.5f);
 		glVertex2f(0.0f, 0.5f);

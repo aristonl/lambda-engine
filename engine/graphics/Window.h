@@ -10,6 +10,8 @@ namespace lambda { namespace graphics {
 		int m_width, m_height;
 		GLFWwindow* m_window;
 		bool m_closed;
+		bool m_fullscreen;
+		bool m_fullscreenWindowed;
 
 		bool init(); // The main window function
 	public:

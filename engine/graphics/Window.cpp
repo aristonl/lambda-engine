@@ -20,7 +20,22 @@ namespace lambda { namespace graphics {
 			return false;
 		}
 
-		m_window = glfwCreateWindow(m_width, m_height, m_title, NULL, NULL);
+		if (m_fullscreen == true) {
+			m_window = glfwCreateWindow(m_width, m_height, m_title, glfwGetPrimaryMonitor(), NULL);
+		}
+		else if (m_fullscreenWindowed == true) {
+			const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+
+			glfwWindowHint(GLFW_RED_BITS, mode->redBits);
+			glfwWindowHint(GLFW_GREEN_BITS, mode->greenBits);
+			glfwWindowHint(GLFW_BLUE_BITS, mode->blueBits);
+			glfwWindowHint(GLFW_REFRESH_RATE, mode->refreshRate);
+
+			m_window = glfwCreateWindow(m_width, m_height, m_title, glfwGetPrimaryMonitor(), NULL);
+		}
+		else {
+			m_window = glfwCreateWindow(m_width, m_height, m_title, NULL, NULL);
+		}
 
 		if (!m_window) {
 			glfwTerminate();
