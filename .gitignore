@@ -9,3 +9,4 @@ build/
 lambda-engine.sln
 engine/engine.vcxproj
 engine/engine.vcxproj.filters
+engine/.editorconfig
