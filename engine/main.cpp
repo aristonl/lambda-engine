@@ -7,7 +7,7 @@ int main() {
 	using namespace lambda;
 	using namespace graphics;
 
-	Window window("Lambda Engine v0.0.1", 800, 600);
+	Window window("Lambda Engine v1.0.0 [MAIN FORK]", 1280, 720);
 	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
 	
 	while (!window.closed()) {
@@ -25,5 +25,6 @@ int main() {
 		window.update();
 	}
 
-	return 0;
+	return 1;
+
 }
