@@ -5,6 +5,10 @@
 
 #include "graphics/Window.h"
 
+#if __APPLE__
+	#define GL_SILENCE_DEPRECATION // Silence GLFW deprecation warnings
+#endif
+
 int main() {
 	using namespace lambda;
 	using namespace graphics;

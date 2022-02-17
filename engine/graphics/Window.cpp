@@ -1,5 +1,9 @@
 #include "Window.h"
 
+#if __APPLE__
+	#define GL_SILENCE_DEPRECATION // Silence GLFW deprecation warnings
+#endif
+
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb-image.h"
 
