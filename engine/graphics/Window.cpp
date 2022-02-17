@@ -1,5 +1,8 @@
 #include "Window.h"
 
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb-image.h"
+
 namespace lambda { namespace graphics {
 	void WindowResize(GLFWwindow* window, int width, int height);
 
@@ -42,6 +45,9 @@ namespace lambda { namespace graphics {
 			std::cout << "[GLFW] Failed to create a GLFW Window." << std::endl;
 			return false;
 		}
+		else {
+			std::cout << "[GLFW] Created a Window!!!" << std::endl;
+		}
 
 		glfwMakeContextCurrent(m_window); // Making sure the main window is set to the only window we have lmao. 
 
@@ -49,6 +55,14 @@ namespace lambda { namespace graphics {
 		// Putting it in the update function is very resource intensive since it will be resetting the viewpoint every
 		// tick so it's better to call WindowResize when a resize is detected.
 		glfwSetWindowSizeCallback(m_window, WindowResize); 
+
+		// Set window icon (TODO: Find a better implementation for this)
+		GLFWimage images[2];
+		images[0].pixels = stbi_load("icon/lambda-large.png", &images[0].width, &images[0].height, 0, 4);
+		images[1].pixels = stbi_load("icon/lambda-small.png", &images[0].width, &images[0].height, 0, 4);
+
+		glfwSetWindowIcon(m_window, 2, images);
+
 		return true;
 	}
 
