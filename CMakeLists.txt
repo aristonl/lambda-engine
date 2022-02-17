@@ -7,10 +7,13 @@ set(ENGINE_SOURCES
 	engine/graphics/stb-image.h
 	engine/graphics/Window.h
 	engine/graphics/Window.cpp
-	engine/input/InputHandler.h
-	engine/input/InputHandler.cpp
 )
 
+add_library(
+	public
+	public/mathlib/vec2.cpp
+	public/mathlib/vec2.h
+)
 
 add_subdirectory(thirdparty/GLFW)
 
@@ -19,7 +22,9 @@ include_directories(${OPENGL_INCLUDE_DIR})
 add_executable(Lambda ${ENGINE_SOURCES})
 
 target_include_directories(Lambda PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/GLFW/include)
+target_include_directories(Lambda PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/public)
 target_link_libraries(Lambda glfw)
+target_link_libraries(Lambda public)
 
 find_package(OpenGL REQUIRED)
 

@@ -1,6 +1,8 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
+#include <mathlib/vec2.h>
+
 #include "graphics/Window.h"
 
 int main() {
