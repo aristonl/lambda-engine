@@ -3,4 +3,9 @@ x64/
 
 *.vcxproj
 
+build/
+
 *.sln
+lambda-engine.sln
+engine/engine.vcxproj
+engine/engine.vcxproj.filters
