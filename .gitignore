@@ -10,3 +10,10 @@ lambda-engine.sln
 engine/engine.vcxproj
 engine/engine.vcxproj.filters
 engine/.editorconfig
+
+CMakeFiles/
+cmake_install.cmake
+CMakeCache.txt
+
+Makefile
+Lambda
