@@ -10,11 +10,18 @@
 namespace lambda { namespace graphics {
 	void WindowResize(GLFWwindow* window, int width, int height);
 
-	Window::Window(const char* title, int width, int height) {
+	// This is a really bad way to enable fullscreen and fullscreen windowed on init, but i'm lazy and it works so whatever.
+	// TODO: Make this better.
+	Window::Window(const char* title, int width, int height, bool fullscreen, bool fullscreenWindowed) {
 		m_title = title;
 		m_width = width;
 		m_height = height;
-		if (!init()) { glfwTerminate(); }
+		m_fullscreen = fullscreen;
+		m_fullscreenWindowed = fullscreenWindowed;
+		if (!init())
+		{
+			glfwTerminate();
+		}
 	}
 
 	Window::~Window() {
@@ -29,6 +36,7 @@ namespace lambda { namespace graphics {
 
 		if (m_fullscreen == true) {
 			m_window = glfwCreateWindow(m_width, m_height, m_title, glfwGetPrimaryMonitor(), NULL);
+			std::cout << "[GLFW] Created window in fullscreen mode." << std::endl;
 		}
 		else if (m_fullscreenWindowed == true) {
 			const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
@@ -39,9 +47,11 @@ namespace lambda { namespace graphics {
 			glfwWindowHint(GLFW_REFRESH_RATE, mode->refreshRate);
 
 			m_window = glfwCreateWindow(m_width, m_height, m_title, glfwGetPrimaryMonitor(), NULL);
+			std::cout << "[GLFW] Created window in fullscreen windowed mode." << std::endl;
 		}
 		else {
 			m_window = glfwCreateWindow(m_width, m_height, m_title, NULL, NULL);
+			std::cout << "[GLFW] Created window in windowed mode." << std::endl;
 		}
 
 		if (!m_window) {

@@ -19,7 +19,7 @@ namespace lambda { namespace graphics {
 
 		bool init(); // The main window function
 	public:
-		Window(const char* title, int width, int height);
+		Window(const char* title, int width, int height, bool fullscreen, bool fullscreenWindowed);
 		~Window();
 		void update(); // Runs every tick.
 		bool closed() const;

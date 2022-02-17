@@ -20,3 +20,8 @@ Lambda.dir/
 
 Makefile
 Lambda
+**/.ninja_log
+**/.ninja_deps
+build.ninja
+
+**/.DS_Store

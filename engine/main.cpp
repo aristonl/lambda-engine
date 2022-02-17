@@ -13,7 +13,7 @@ int main() {
 	using namespace lambda;
 	using namespace graphics;
 
-	Window window("Lambda Engine v1.0.0 [MAIN FORK]", 1280, 720);
+	Window window("Lambda Engine v1.0.0 [MAIN FORK]", 1280, 720, false, false);
 	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);
 	
 	while (!window.closed()) {
