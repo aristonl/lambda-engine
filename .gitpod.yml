@@ -2,7 +2,11 @@
 # Please adjust to your needs (see https://www.gitpod.io/docs/config-gitpod-file)
 # and commit this file to your remote git repository to share the goodness with others.
 
+image: gitpod/workspace-full-vnc
+ports:
+  - port: 6080
+  - onOpen: open-preview
+
 tasks:
+  - init: sudo apt update && sudo apt install pkg-config mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev libglew-dev libglfw3-dev libglm-dev libao-dev libmpg123-dev libxinerama-dev libxcursor-dev libxrandr-dev libxi-dev
   - init: cmake .
-
-
