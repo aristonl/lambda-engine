@@ -14,6 +14,6 @@ jobs:
       - name: Update apt
         run: sudo apt update
       - name: Install Dependencies
-        run: sudo apt install cmake pkg-config mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev libglew-dev libglfw3-dev libglm-dev libao-dev libmpg123-dev libxinerama-dev
+        run: sudo apt install cmake pkg-config mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev libglew-dev libglfw3-dev libglm-dev libao-dev libmpg123-dev libxinerama-dev libxcursor-dev libxrandr-dev libxi-dev
       - name: make
         run: cmake . && make
