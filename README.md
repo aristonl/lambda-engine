@@ -16,6 +16,3 @@ https://discord.gg/65fmUzsKkG
 <a href="https://github.com/4tl0renz0"> Ariston Lorenzo</a>
 
 <a href="https://github.com/Myst330"> Genesis Banzon </a>
-
-
-
