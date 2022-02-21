@@ -2,22 +2,28 @@
 
 #include <iostream>
 
-struct vec2 {
-	// TODO: add +=, -=, *=, /= operator overloads
+struct idVec2 
+{
 	float x, y;
 
-	vec2();
-	vec2(const float& x, const float& y);
+	idVec2();
+	idVec2(const float& x, const float& y);
 
-	vec2& add(const vec2& other);
-	vec2& subtract(const vec2& other);
-	vec2& multiply(const vec2& other);
-	vec2& divide(const vec2& other);
+	idVec2& add(const idVec2& other);
+	idVec2& subtract(const idVec2& other);
+	idVec2& multiply(const idVec2& other);
+	idVec2& divide(const idVec2& other);
 
-	friend vec2& operator+(vec2& left, const vec2& right);
-	friend vec2& operator-(vec2& left, const vec2& right);
-	friend vec2& operator*(vec2& left, const vec2& right);
-	friend vec2& operator/(vec2& left, const vec2& right);
+	friend idVec2& operator+(idVec2& left, const idVec2& right);
+	friend idVec2& operator-(idVec2& left, const idVec2& right);
+	friend idVec2& operator*(idVec2& left, const idVec2& right);
+	friend idVec2& operator/(idVec2& left, const idVec2& right);
 
-	friend std::ostream& operator<<(std::ostream& stream, const vec2& vector);
+	idVec2 &operator+=(const idVec2 &other);
+	idVec2 &operator-=(const idVec2 &other);
+	idVec2 &operator*=(const idVec2 &other);
+	idVec2 &operator/=(const idVec2 &other);
+
+
+	friend std::ostream& operator<<(std::ostream& stream, const idVec2& vector);
 };

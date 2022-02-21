@@ -11,8 +11,8 @@ set(ENGINE_SOURCES
 
 add_library(
 	public
-	public/mathlib/vec2.cpp
-	public/mathlib/vec2.h
+	public/mathlib/idVec2.cpp
+	public/mathlib/idVec2.h
 )
 
 add_subdirectory(thirdparty/GLFW)

@@ -1,72 +1,99 @@
-#include "vec2.h"
-
-// TODO: add +=, -=, *=, /= operator overloads
+#include "idVec2.h"
 
 // A quick example of what this does (which should help you know what the rest do)
-	// vec2 vector(1.0f, 2.0f);
-	// vector.add(vec2(3.0f, 4.0f)).add(vec2(5.0f, 6.0f));
+	// idVec2 vector(1.0f, 2.0f);
+	// vector.add(idVec2(3.0f, 4.0f)).add(idVec2(5.0f, 6.0f));
 
-	// vec2 a(1.0f, 2.0f);
-	// vec2 b(3.0f, 4.0f);
-	// vec2 c = a + b;
+	// idVec2 a(1.0f, 2.0f);
+	// idVec2 b(3.0f, 4.0f);
+	// idVec2 c = a + b;
 
-	// std::cout << c << std::endl; --(CONSOLE)-> vec2: (4, 6)
+	// std::cout << c << std::endl; --(CONSOLE)-> idVec2: (4, 6)
 
-vec2::vec2() {
+idVec2::idVec2() 
+{
 	x = 0.0f;
 	y = 0.0f;
 }
 
-vec2::vec2(const float& x, const float& y) {
+idVec2::idVec2(const float& x, const float& y) 
+{
 	this->x = x;
 	this->y = y;
 }
 
-vec2& vec2::add(const vec2& other) {
+idVec2& idVec2::add(const idVec2& other) 
+{
 	x += other.x;
 	y += other.y;
 
 	return *this;
 }
 
-vec2& vec2::subtract(const vec2& other) {
+idVec2& idVec2::subtract(const idVec2& other) 
+{
 	x -= other.x;
 	y -= other.y;
 
 	return *this;
 }
 
-vec2& vec2::multiply(const vec2& other) {
+idVec2& idVec2::multiply(const idVec2& other) 
+{
 	x *= other.x;
 	y *= other.y;
 
 	return *this;
 }
 
-vec2& vec2::divide(const vec2& other) {
+idVec2& idVec2::divide(const idVec2& other) 
+{
 	x /= other.x;
 	y /= other.y;
 
 	return *this;
 }
 
-vec2& operator+(vec2& left, const vec2& right) {
+idVec2& operator+(idVec2& left, const idVec2& right) 
+{
 	return left.add(right);
 }
 
-vec2& operator-(vec2& left, const vec2& right) {
+idVec2& operator-(idVec2& left, const idVec2& right) 
+{
 	return left.subtract(right);
 }
 
-vec2& operator*(vec2& left, const vec2& right) {
+idVec2& operator*(idVec2& left, const idVec2& right) 
+{
 	return left.multiply(right);
 }
 
-vec2& operator/(vec2& left, const vec2& right) {
+idVec2& operator/(idVec2& left, const idVec2& right) 
+{
 	return left.divide(right);
 }
 
-std::ostream& operator<<(std::ostream& stream, const vec2& vector) {
-	stream << "vec2: (" << vector.x << ", " << vector.y << ")";
+idVec2 &idVec2::operator+=(const idVec2 &other) 
+{
+	return add(other);
+}
+idVec2 &idVec2::operator-=(const idVec2 &other) 
+{
+	return subtract(other);
+}
+idVec2 &idVec2::operator*=(const idVec2 &other) 
+{
+	return multiply(other);
+}
+
+idVec2 &idVec2::operator/=(const idVec2 &other) 
+{
+	return divide(other);
+}
+
+std::ostream& operator<<(std::ostream& stream, const idVec2& vector) 
+{
+	stream << "idVec2: (" << vector.x << ", " << vector.y << ")";
 	return stream;
 }
