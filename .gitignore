@@ -26,3 +26,5 @@ build.ninja
 
 **/.DS_Store
 libpublic.a
+
+patches/
