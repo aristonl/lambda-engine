@@ -50,3 +50,28 @@ size_t bufferSize;
 class HTMLDocument;
 String mimeType();
 ```
+
+## Comments
+
+### Copyright Header
+```cpp
+//========= Copyright N11 Software, All rights reserved. ============//
+//
+// Purpose: ---
+//
+//===================================================================//
+```
+
+### Declaration Header
+```cpp
+//===================================================================//
+//
+//===================================================================//
+```
+
+All `#endif` statements must have a comment to what `#if`/`#ifndef` it belongs to.
+```cpp
+#ifndef IS_WINDOWS_PC
+// code...
+#endif		// IS_WINDOWS_PC
+```
