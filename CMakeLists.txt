@@ -2,6 +2,14 @@ cmake_minimum_required(VERSION 3.13)
 project(Lambda)
 set(CMAKE_CXX_STANDARD 17)
 
+if (UNIX)
+	add_definitions(-DUSE_GLFW)
+endif()
+
+if (WIN32)
+	add_definitions(-DWIN32)
+endif()
+
 set(ENGINE_SOURCES
 	engine/main.cpp
 	engine/graphics/stb-image.h

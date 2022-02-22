@@ -5,11 +5,18 @@
 
 #include "graphics/Window.h"
 
-#if __APPLE__
+#if defined (USE_GLFW)
 	#define GL_SILENCE_DEPRECATION // Silence GLFW deprecation warnings
 #endif
 
 int main() {
+
+#if defined (USE_GLFW)
+	std::cout << "[INFO] Detected Unix platform" << std::endl;
+#elif defined (WIN32)
+	std::cout << "[INFO] Detected Windows platform" << std::endl;
+#endif
+
 	using namespace lambda;
 	using namespace graphics;
 
