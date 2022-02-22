@@ -8,6 +8,9 @@ endif()
 
 if (WIN32)
 	add_definitions(-DWIN32)
+	target_include_directories(Lambda PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/DX12/include)
+	add_subdirectory(thirdparty/DX12)
+	target_link_libraries(Lambda PRIVATE d3d12 d3dcompiler d3d12-dynamic)
 endif()
 
 set(ENGINE_SOURCES
