@@ -60,7 +60,7 @@ namespace lambda { namespace graphics {
 			return false;
 		}
 		else {
-			std::cout << "[GLFW] Created a Window!!!" << std::endl;
+			return true;
 		}
 
 		glfwMakeContextCurrent(m_window); // Making sure the main window is set to the only window we have lmao. 
