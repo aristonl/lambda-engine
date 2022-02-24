@@ -56,14 +56,4 @@ Signed-off-by: Ariston Lorenzo <4tl0renz0@gmail.com>
 ```
 
 #### Patching
-Once your commit is made, you can either directly create a pull request on GitHub, or submit a patch to the email list (which will result in a faster merge or reject). If you choose a GitHub Pull Request, just follow the template and submit your request. If you choose patches, this is how to create and send patches to the mailing list.
-<br>
-First, take the commit ID of your commit and run `git format-patch -1 [commit ID]`. Keep creating patches for every commit part of your PR. Once you finish, edit the subject of your tag to include the fork/branch name and commit number (out of all commits part of the PR) if multiple commits are part of the PR. It should look something like this:
-```
-Single Commit Example:
-Subject: [4tl0renz0/master] [PATCH] mathlib: Added a new operator to ivec4.
-
-Multiple Commit Example:
-Subject: [Myst330/release] [02/03] [PATCH] mathlib: Implemented ivec3.
-```
-Now all you have to do is use `git send-email` to send it to the mailing list, and the maintainer will let you know if you were merged or rejected. A tutorial for `git send-email` is available at https://git-send-email.io/
+Once your commit is made, directly create a pull request on GitHub. If you choose a GitHub Pull Request, just follow the template and submit your request. Make sure you also take use of adding reviewers and labels.
