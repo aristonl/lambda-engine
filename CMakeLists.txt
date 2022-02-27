@@ -8,9 +8,8 @@ endif()
 
 if (WIN32)
 	add_definitions(-DWIN32)
-	target_include_directories(Lambda PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/DX12/include)
 	add_subdirectory(thirdparty/DX12)
-	target_link_libraries(Lambda PRIVATE d3d12 d3dcompiler d3d12-dynamic)
+	
 endif()
 
 set(ENGINE_SOURCES
@@ -33,6 +32,7 @@ include_directories(${OPENGL_INCLUDE_DIR})
 add_executable(Lambda ${ENGINE_SOURCES})
 
 target_include_directories(Lambda PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/GLFW/include)
+target_include_directories(Lambda PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/DX12/include)
 target_include_directories(Lambda PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/public)
 target_link_libraries(Lambda glfw)
 target_link_libraries(Lambda public)
