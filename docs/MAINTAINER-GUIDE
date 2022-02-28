@@ -83,3 +83,18 @@ signed-off tag.
 ---
 macro index ,l '| git am -s'\n
 ---
+
+----------------------------
+SECTION 3 - APPLYING PATCHES
+----------------------------
+1) What to look for in a patch
+TODO!!!
+
+2) Appling the Patch
+Once you've reviewed the patch in mutt, exit out of the email and select it in
+the main inbox menu and type ',l' (or whatever you set your macro to) whilst
+in the repository folder. This will apply the patch and once applied you can
+push the commit to your tree. If there are too many apply errors when appling
+the patch, you have the right to reject the patch and either ask for a revision
+or reject the patch entirely. If the patch successfully merges make sure to let 
+the submitter know that you've merged their patch!
