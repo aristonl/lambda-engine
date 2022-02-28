@@ -1,11 +1,11 @@
 #pragma once
 
 #include <iostream>
-#include <GLFW/glfw3.h>
 
 #if __APPLE__
 	#define GL_SILENCE_DEPRECATION // Silence GLFW deprecation warnings
 #endif
+#include <GLFW/glfw3.h>
 
 namespace lambda { namespace graphics {
 	class Window {
