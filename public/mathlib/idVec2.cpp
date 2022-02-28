@@ -1,4 +1,10 @@
+//========= Copyright N11 Software, All rights reserved. ============//
+//
+// Purpose: ---
+//
+//===================================================================//
 #include "idVec2.h"
+#include "Vector.h"
 
 // A quick example of what this does (which should help you know what the rest do)
 	// idVec2 vector(1.0f, 2.0f);
@@ -13,7 +19,7 @@
 idVec2::idVec2() 
 {
 	x = 0.0f;
-	y = 0.0f;
+	y = 0.0f; 
 }
 
 idVec2::idVec2(const float& x, const float& y) 
@@ -54,22 +60,22 @@ idVec2& idVec2::divide(const idVec2& other)
 	return *this;
 }
 
-idVec2& operator+(idVec2& left, const idVec2& right) 
+idVec2& operator+(idVec2 left, const idVec2& right) 
 {
 	return left.add(right);
 }
 
-idVec2& operator-(idVec2& left, const idVec2& right) 
+idVec2& operator-(idVec2 left, const idVec2& right) 
 {
 	return left.subtract(right);
 }
 
-idVec2& operator*(idVec2& left, const idVec2& right) 
+idVec2& operator*(idVec2 left, const idVec2& right) 
 {
 	return left.multiply(right);
 }
 
-idVec2& operator/(idVec2& left, const idVec2& right) 
+idVec2& operator/(idVec2 left, const idVec2& right) 
 {
 	return left.divide(right);
 }

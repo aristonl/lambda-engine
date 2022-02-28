@@ -1,3 +1,8 @@
+//========= Copyright N11 Software, All rights reserved. ============//
+//
+// Purpose: ---
+//
+//===================================================================//
 #pragma once
 
 #include <iostream>
@@ -14,10 +19,10 @@ struct idVec2
 	idVec2& multiply(const idVec2& other);
 	idVec2& divide(const idVec2& other);
 
-	friend idVec2& operator+(idVec2& left, const idVec2& right);
-	friend idVec2& operator-(idVec2& left, const idVec2& right);
-	friend idVec2& operator*(idVec2& left, const idVec2& right);
-	friend idVec2& operator/(idVec2& left, const idVec2& right);
+	friend idVec2& operator+(idVec2 left, const idVec2& right);
+	friend idVec2& operator-(idVec2 left, const idVec2& right);
+	friend idVec2& operator*(idVec2 left, const idVec2& right);
+	friend idVec2& operator/(idVec2 left, const idVec2& right);
 
 	idVec2 &operator+=(const idVec2 &other);
 	idVec2 &operator-=(const idVec2 &other);
