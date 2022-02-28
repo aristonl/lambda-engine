@@ -1,0 +1,85 @@
+				
+				MAINTAINER GUIDE TO LAMBDA ENGINE
+
+This document was created to be a helpful guide for new maintainers and to show
+the parts of the maintainer workflow. Being a maintainer for the first time can
+be extremely daunting especially with having to adopt the git patch workflow
+for the first time. This document will go over how to play the maintainer role
+and overview the maintainer side of the git patch workflow.
+
+---------------------------------
+SECTION 1 - BECOMING A MAINTAINER
+---------------------------------
+The current way of becoming a maintainer is through contributing enough to a
+certain subsystem of the engine to become the maintainer of that subsystem. If
+you're interested in appling to be a maintainer, contact Ariston.
+
+-----------------------------
+SECTION 2 - CONFIGURING TOOLS
+-----------------------------
+Congratulations! You are now a maintainer of Lambda Engine. This chapter
+contains details on what tools you need to make your job easier.
+
+1) Installing dependencies
+Make sure you are on either macOS, Linux, or are running WSL on Windows. Info
+on installing WSL can be found here: https://docs.microsoft.com/en-us/windows/wsl/install
+
+The only dependencies we need are GIT and Mutt/NeoMutt.
+
+macOS (brew): brew update && brew install git neomutt 
+Linux (Ubuntu): sudo apt update && sudo apt install git neomutt
+
+2) Configuring GIT
+Since we don't host on GitHub and only on our own GIT server, most of the steps
+compared to working on GitHub are different since for 1. We don't a have a web
+GUI and 2. We use patches rather than full-on pull-requests.
+
+First thing we need to set is our GIT username and email since we sign-off all
+commits and patches (this is to ensure we know that someone approves of the
+patch or is the creator of the patch.):
+---
+ $ git config --global user.name <Full Name>
+ $ git config --global user.email <Email>
+---
+
+Or edit the ~/.gitconfig file directly:
+
+---
+[user]
+	name = <Full Name>
+	email = <Email>
+---
+
+3) Configuring Mutt/NeoMutt
+Mutt is a command-line based email client built for Unix. Using mutt for
+handling patches from the mailing list makes life easier due to the shear
+hackibility of the program.
+
+First things first, connect mutt (~/.muttrc or ~/.neomuttrc) with your Email Server (using Gmail as an
+example):
+---
+set from = "username@gmail.com"
+set realname = "Real Name"
+
+set imap_user = "username@gmail.com"
+set imap_pass = "password"
+
+set smtp_url = "smtps://username@gmail.com:2525"
+set smtp_pass = "password"
+
+set folder = "imaps://imap.gmail.com"
+set spoolfile = "+INBOX"
+set record="+[Gmail]/Sent Mail"
+set postponed="+[Gmail]/Drafts"
+
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+---
+
+Next add a macro somewhere in your muttrc that applies the patch with a
+signed-off tag.
+
+---
+macro index ,l '| git am -s'\n
+---
