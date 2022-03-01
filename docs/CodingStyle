@@ -39,6 +39,15 @@ if (foo == true) {
 }
 ---
 
+4) Line Length
+80 is the recommended maximum for line length. What do we mean by 'recommended'?
+If your statement just happens to go slightly over the line (anymore from around
+81-90) is plausible considering indentation and the fact that it's just slightly
+over the limit so we don't really care. If you do go over this limit, it's a
+good time to check to see if something is over-engineered. In the case of emails,
+commit descriptions, etc., these should all follow the 80 line limit since it's
+better for our (by default) 80 x 60 terminal windows.
+
 ====================
 SECTION 2 - NOTATION
 ====================
