@@ -1,0 +1,96 @@
+
+N11 SOFTWARE CODING STYLE
+
+This document contains information on the general coding guidelines are for N11
+Software/Lambda Engine. Our coding style is a bit haphazard, but it evolved out
+of 90s Windows/Win32 programming standards.
+
+=======================
+SECTION 1 - INDENTATION
+=======================
+
+1) Tabs vs. Spaces
+Identation should be tab-indented not space-indented.
+
+2) Indent Size
+The indent size should be 4 spaces.
+---
+int foo()
+{
+	int bar = 0;
+	int baz = 0;
+	int qux = 0;
+}
+---
+
+3) Bracket Placing
+Brackets should be on their own line for a function.
+---
+void foo()
+{
+	// code.
+}
+---
+
+Brackets should be on the same line its statement if it is not a function.
+---
+if (foo == true) {
+	// code.
+}
+---
+
+====================
+SECTION 2 - NOTATION
+====================
+
+1) Hungarian Notation
+"Hungarian Notation" was a common practice back in 90's C/C++ style for Windows
+and is still used today in some projects. We have adopted use of it in N11.
+This part isn't a 'requirement' since in some use cases, it really doesn't
+matter or it just doesn't look good in which we'll break this section. We still
+encourage you to do this as much as you can but there isn't usually any need
+to.
+
+| Prefix | Description   |
+|--------|---------------|
+| b      | Boolean       |
+| c      | Counter       |
+| C		 | Class		 |
+| g_     | Global        |
+| i      | Integers      |
+| m_     | Class members |
+| s_	 | Static		 |
+
+2) Naming Style
+We use CamelCase for everything (file names, functions, etc..). Capitalize the
+first letter in classes and structs. Lowercase the first letter in a variable
+or function name.
+
+---
+struct Data
+size_t bufferSize;
+class CHTMLDocument;
+String mimeType();
+---
+
+====================
+SECTION 3 - COMMENTS
+====================
+
+1) Copyright Header
+---
+//========= Copyright N11 Software, All rights reserved. ============//
+//
+// Purpose: ---
+//
+//===================================================================//
+---
+
+2) Declaration Header
+//===================================================================//
+//
+//===================================================================//
+
+3) #endif
+All '#endif' statements must have a comment to what '#if'/'#ifndef; it belongs
+to.
