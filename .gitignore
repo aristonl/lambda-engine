@@ -29,3 +29,4 @@ build.ninja
 libpublic.a
 
 patches/
+*.patch
