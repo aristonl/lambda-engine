@@ -9,6 +9,7 @@
 
 namespace lambda { namespace graphics {
 	void WindowResize(GLFWwindow* window, int width, int height);
+	void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
 	// This is a really bad way to enable fullscreen and fullscreen windowed on init, but i'm lazy and it works so whatever.
 	// TODO: Make this better.
@@ -89,9 +90,15 @@ namespace lambda { namespace graphics {
 		glfwSwapBuffers(m_window);
 		glfwGetFramebufferSize(m_window, &m_width, &m_height);
 		glfwPollEvents();
+		glfwSetKeyCallback(m_window, keyCallback);
 	}
 
 	void WindowResize(GLFWwindow* window, int width, int height) { 
 		glViewport(0, 0, width, height);
 	}
 } }
+
+void keyCallback(GLFWwindow* window, int key, int scanCode, int action, int mods)
+{
+	std::cout << key << std::endl;
+}
