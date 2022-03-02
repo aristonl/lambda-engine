@@ -78,6 +78,11 @@ namespace lambda { namespace graphics {
 		return true;
 	}
 
+	void keyCallback(GLFWwindow* window, int key, int scanCode, int action, int mods)
+	{
+		std::cout << key << std::endl;
+	}
+
 	bool Window::closed() const {
 		return glfwWindowShouldClose(m_window) == 1;
 	}
@@ -97,8 +102,3 @@ namespace lambda { namespace graphics {
 		glViewport(0, 0, width, height);
 	}
 } }
-
-void keyCallback(GLFWwindow* window, int key, int scanCode, int action, int mods)
-{
-	std::cout << key << std::endl;
-}
