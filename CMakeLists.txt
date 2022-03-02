@@ -32,6 +32,8 @@ include_directories(${OPENGL_INCLUDE_DIR})
 add_executable(Lambda ${ENGINE_SOURCES})
 
 target_include_directories(Lambda PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/GLFW/include)
+target_include_directories(Lambda PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/GLEW/include)
+target_include_directories(Lambda PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/glad/include)
 target_include_directories(Lambda PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/DX12/include)
 target_include_directories(Lambda PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/public)
 target_link_libraries(Lambda glfw)
