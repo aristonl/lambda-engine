@@ -26,6 +26,7 @@ add_library(
 )
 
 add_subdirectory(thirdparty/GLFW)
+add_subdirectory(thirdparty/glm)
 
 include_directories(${OPENGL_INCLUDE_DIR})
 
@@ -34,9 +35,11 @@ add_executable(Lambda ${ENGINE_SOURCES})
 target_include_directories(Lambda PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/GLFW/include)
 target_include_directories(Lambda PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/GLEW/include)
 target_include_directories(Lambda PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/glad/include)
+target_include_directories(Lambda PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/glm)
 target_include_directories(Lambda PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/DX12/include)
 target_include_directories(Lambda PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/public)
 target_link_libraries(Lambda glfw)
+target_link_libraries(Lambda glm)
 target_link_libraries(Lambda public)
 
 find_package(OpenGL REQUIRED)
