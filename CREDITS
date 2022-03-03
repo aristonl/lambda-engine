@@ -6,11 +6,18 @@ feel free to add your info to this document.
 		Ariston.
 -----------------------------------------
 
+Fields:
+	N - Name
+	E - Email
+	D - Description
+	G - GitHub/GitLab/etc. Username
+
 N: Ariston Thomas Lorenzo
 E: 4tl0renz0@gmail.com
 E: aristonl@n11software.com
 D: Main developer of Lambda Engine
 D: Maintainer of the master branch.
+G: @4tl0renz0
 
 N: Levi Hicks
 E: firelscar.n11@gmail.com
