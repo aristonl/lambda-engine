@@ -1,0 +1,9 @@
+Working with the Lambda Engine Developer Community
+==================================================
+
+Looking into helping develop Lambda? Welcome! Even though you also have
+to learn about the engine development through a technical sense, it is
+extremely important to also learn how the community works and the
+process of getting your code into the next release. These documents
+will make it much easier for you to get your changes merged with the
+least amount of trouble.
