@@ -1,0 +1,76 @@
+
+						LAMBDA ENGINE SDK LICENSE
+
+Lambda Engine Copyright © 2022 N11 Software.
+
+THIS DOCUMENT DESCRIBES A CONTRACT BETWEEN YOU AND N11 SOFTWARE ("N11").
+PLEASE READ IT BEFORE DOWNLOADING OR USING THE LAMBDA ENGINE SDK ("SDK"). BY
+DOWNLOADING AND/OR USING THE LAMBDA ENGINE SDK YOU ACCEPT THIS LICENSE. IF
+YOU DO NOT AGREE TO THE TERMS OF THIS LICENSE PLEASE DO NOT DOWNLOAD OR USE
+THE SDK.
+
+1.)	You may, free of charge, download and use the SDK to develop a modified 
+	N11 game or to develop a independent game running on the Lambda engine.
+	The modification and/or game may by distributed in source and object code
+	form but only for free. Any modifications and/or games that are not free
+	and use Lambda must contact N11 and license the engine.
+
+2.) You may copy, modify, and distribute the SDK and any modifications you
+	make to the SDK in source and object code form, but only for free.  Any
+	distribution of this SDK must include this LICENSE file.
+
+3.) Neither the name of the copyright holder nor the names of its contributors
+	may be used to endorse or promote products derived from this software without
+	specific prior written permission.
+
+4.) Any distribution of the SDK or a substantial portion of the SDK must
+	include the above copyright notice, copyright notices of other third-party
+	code used, as well as the following:
+		
+		DISCLAMER OF WARRANTIES.  THE LAMBDA SDK AND ANY
+		OTHER MATERIAL DOWNLOADED BY LICENSEE IS PROVIDED
+		"AS IS".  N11 AND ITS SUPPLIERS DISCLAIM ALL
+		WARRANTIES WITH RESPECT TO THE SDK, EITHER EXPRESS
+		OR IMPLIED, INCLUDING, BUT NO LIMITED TO, IMPLIED
+		WARRANTIES OF MERCHANTABILITY, NON-INFRIGEMENT,
+		TITLE AND FITNESS FOR A PARTICULAR PURPOSE.
+
+		LIMITATION OF LIABILITY.  IN NO EVENT SHALL N11 OR 
+    	ITS SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, 
+    	INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER 
+    	(INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF 
+    	BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF 
+    	BUSINESS INFORMATION, OR ANY OTHER PECUNIARY LOSS) 
+    	ARISING OUT OF THE USE OF OR INABILITY TO USE THE 
+    	ENGINE AND/OR THE SDK, EVEN IF N11 HAS BEEN 
+    	ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+If you would like to use this software for a commercial purpose,
+please contact N11 at:
+licensing@n11software.com
+
+===============================================================================
+									 GLFW
+===============================================================================
+Copyright (c) 2002-2006 Marcus Geelnard
+
+Copyright (c) 2006-2019 Camilla Löwy
+
+This software is provided 'as-is', without any express or implied
+warranty. In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software
+   in a product, an acknowledgment in the product documentation would
+   be appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not
+   be misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source
+   distribution.
